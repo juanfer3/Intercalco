@@ -1,0 +1,2 @@
+module BaseTintaHelper
+end

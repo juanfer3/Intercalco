@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lineas Tinta</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tipo de linea</th>
+      <th>Caracteristica</th>
+      <th>Estado</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lineas_tinta.each do |linea_tinta| %>
+      <tr>
+        <td><%= linea_tinta.tipo_de_linea %></td>
+        <td><%= linea_tinta.caracteristica %></td>
+        <td><%= linea_tinta.estado %></td>
+        <td><%= link_to 'Show', linea_tinta %></td>
+        <td><%= link_to 'Edit', edit_linea_tinta_path(linea_tinta) %></td>
+        <td><%= link_to 'Destroy', linea_tinta, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Linea Tinta', new_linea_tinta_path %>

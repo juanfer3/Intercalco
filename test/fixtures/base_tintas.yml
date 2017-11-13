@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  codigo: MyString
+  linea_tinta: one
+  descripcion_base: MyText
+  estado: false
+
+two:
+  codigo: MyString
+  linea_tinta: two
+  descripcion_base: MyText
+  estado: false

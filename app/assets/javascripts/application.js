@@ -11,5 +11,15 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require jquery
+//= require materialize
+//= require materialize-form
+//= require materialize-sprockets
+//= require cocoon
+//= require jquery.turbolinks
 //= require turbolinks
 //= require_tree .
+
+Materialize.toast('Reload! :)', 4000) // 4000 is the duration of the toast
+
+

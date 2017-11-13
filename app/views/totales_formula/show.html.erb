@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Formula tinta:</strong>
+  <%= @total_formula.formula_tinta %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @total_formula.total %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @total_formula.estado %>
+</p>
+
+<%= link_to 'Edit', edit_total_formula_path(@total_formula) %> |
+<%= link_to 'Back', totales_formula_path %>

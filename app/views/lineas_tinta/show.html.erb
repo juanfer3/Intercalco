@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tipo de linea:</strong>
+  <%= @linea_tinta.tipo_de_linea %>
+</p>
+
+<p>
+  <strong>Caracteristica:</strong>
+  <%= @linea_tinta.caracteristica %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @linea_tinta.estado %>
+</p>
+
+<%= link_to 'Edit', edit_linea_tinta_path(@linea_tinta) %> |
+<%= link_to 'Back', lineas_tinta_path %>

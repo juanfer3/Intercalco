@@ -9,6 +9,27 @@
   </head>
 
   <body>
-    <%= yield %>
+    <!--/Navbar-->
+    <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><%=link_to "Lineas De Tintas", lineas_tinta_path%></li>
+        <li><%=link_to "Mallas", mallas_path%></li>
+        <li><%=link_to "Tintas", tintas_path%></li>
+        <li><%=link_to "Productos", productos_path%></li>
+        <li><%=link_to "Formula Tintas", formula_tintas_path%></li>
+        <li><%=link_to "Base Para Tintas", base_tintas_path%></li>
+      </ul>
+    </div>
+  </nav>
+  <!--/Navbar-->
+  
+    <div class="container">
+      <%= yield %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js"></script>
+    </div>
   </body>
 </html>

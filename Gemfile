@@ -52,3 +52,24 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# materialize
+gem 'materialize-sass'
+# jquery turbolinkd
+gem 'jquery-turbolinks'
+# jquery
+gem 'jquery-rails'
+
+# Icons Materialize
+gem 'material_icons'
+
+#Simple_Form Materialize
+gem 'simple_form'
+gem 'nested_form'
+gem 'materialize-form'
+
+# cocoon
+gem "cocoon"
+
+# paginacion
+gem 'kaminari'

@@ -1,0 +1,21 @@
+<%= simple_form_for @tinta do |f|  %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :codigo %>
+    <%= f.input :pantone %>
+    <%= f.association :malla %>
+    <%= f.association :producto %>
+    <%= f.input :tipo_de_unidad %>
+    <%= f.input :cantida %>
+    <%= f.input :estado %>
+  </div>
+
+  <%=f.fields_for :formula_tintas do |formulas_for_form|%>
+     <%= render 'form',f:formulas_for_form%>
+  <%end%>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
