@@ -10,7 +10,6 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require rails-ujs
 //= require jquery2
 //= require jquery_ujs
 //= require jquery.turbolinks
@@ -23,15 +22,23 @@
 Materialize.toast('Reload! :)', 4000) // 4000 is the duration of the toast
 
 
-function remove_fields(link) {
+/*function remove_fields(link) {
   $(link).previous("input[type=hidden]").value = "1";
   $(link).up(".fields").hide();
-}
+}*/
+$(document).ready(function(){
+    $('.add').click(function(){
+        alert('click')
+    
+        function add_fields(link, association, content) {
+          var new_id = new Date().getTime();
+          console.log(new_id);
+          var regexp = new RegExp("new_" + association, "g")
+          console.log(regexp);
+          $(link).up().insert({
+            before: content.replace(regexp, new_id)
+          });
+        }
+    })
 
-function add_fields(link, association, content) {
-  var new_id = new Date().getTime();
-  var regexp = new RegExp("new_" + association, "g")
-  $(link).up().insert({
-    before: content.replace(regexp, new_id)
-  });
-}
+})

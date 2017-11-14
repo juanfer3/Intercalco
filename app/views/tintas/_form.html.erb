@@ -20,10 +20,20 @@
   <%end%>
 
   <div class="form-actions">
-    <div class="add_fields">
-    <%= link_to_add_fields "add_fields ", f, :formula_tintas  %>
+    <div class="add_fields add">
+
+    
     </div>
-    <%= f.button :submit %>
+      
+        <%= 
+          link_to_add_fields "add_fields ",
+          f, :formula_tintas  
+        %>
+      
+      
+      <%= 
+        f.button :submit 
+      %>
     
   </div>
 <% end %>
