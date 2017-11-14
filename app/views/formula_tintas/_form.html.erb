@@ -2,10 +2,24 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.association :tinta %>
-    <%= f.association :base_tinta %>
+    <%= 
+        f.association :tinta,
+        collection: Tinta.all, 
+        label_method: :pantone, 
+        value_method: :id, 
+        as: :select, 
+        include_blank: 'Seleccion Tinta'
+    %>
+    <%= 
+       f.association :base_tinta,
+       collection: BaseTinta.all, 
+       label_method: :descripcion_base, 
+       value_method: :id, 
+       as: :select, 
+       include_blank: 'Seleccion Base'
+    %>
     <%= f.input :cantidad %>
-    <%= f.input :estado %>
+  
   </div>
 
   <div class="form-actions">

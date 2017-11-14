@@ -1,37 +1,35 @@
 <div>
     <h3>Formulario Anidado</h3>
-  <div class="field">
-      
-       <%=
-         f.association :base_tinta,
-         collection: BaseTinta.all, 
-         label_method: :descripcion_base, 
-         value_method: :id, 
-         as: :select, 
-         include_blank: 'Seleccione Base'
-       %>
+    
+  <div class="row">
+      <!-- Select Base -->
+      <div class="field s12">
+           <%=
+             f.association :base_tinta,
+             collection: BaseTinta.all, 
+             label_method: :descripcion_base, 
+             value_method: :id, 
+             as: :select, 
+             include_blank: 'Seleccione Base'
+           %>
+       </div>
+       <!--/Select Base  -->
+       
+       <!-- Input Cantidad -->
+       <div class="field s12">
+         
+           <%=
+           f.input :cantidad
+           %>
        
      </div>
      
-     <!--  -->
-     <div class="field s12">
-         
-       <%=
-       f.input :cantidad
-       %>
-       
-     </div>
+     <!--/Input Cantidad  -->
      
-     <div class="field s12">
-         
-       <%=
-       f.input :estado
-       %>
-       
-     </div>
+     
      
      <%= f.hidden_field :_destroy %>
-	<%= link_to "Eliminar", '#', class: "remove_fields" %>
+	<%= link_to "Eliminar", '', class: "remove_fields" %>
 
 
 </div>

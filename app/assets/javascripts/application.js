@@ -26,19 +26,15 @@ Materialize.toast('Reload! :)', 4000) // 4000 is the duration of the toast
   $(link).previous("input[type=hidden]").value = "1";
   $(link).up(".fields").hide();
 }*/
-$(document).ready(function(){
-    $('.add').click(function(){
-        alert('click')
-    
-        function add_fields(link, association, content) {
-          var new_id = new Date().getTime();
-          console.log(new_id);
-          var regexp = new RegExp("new_" + association, "g")
-          console.log(regexp);
-          $(link).up().insert({
-            before: content.replace(regexp, new_id)
-          });
-        }
-    })
 
-})
+function remove_fields(link) {
+  $(link).prev("input[type=hidden]").val("1");
+  $(link).closest(".fields").hide();
+}
+
+function add_fields(link, association, content) {
+  var new_id = new Date().getTime();
+  var regexp = new RegExp("new_" + association, "g")
+  $(link).parent().before(content.replace(regexp, new_id));
+}
+

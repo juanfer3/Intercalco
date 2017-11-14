@@ -4,7 +4,7 @@ class CreateFormulaTintas < ActiveRecord::Migration[5.1]
       t.references :tinta, foreign_key: true
       t.references :base_tinta, foreign_key: true
       t.float :cantidad
-      t.boolean :estado
+      t.boolean :estado, default(true)
 
       t.timestamps
     end

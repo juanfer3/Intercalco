@@ -18,3 +18,42 @@
 /*----------------------------------------Fonts Materialize--------------------------*/
  @import "https://fonts.googleapis.com/icon?family=Material+Icons";
  /*----------------------------------------Toadstr--------------------------*/
+@import url('https://fonts.googleapis.com/css?family=BenchNine|Righteous');
+ 
+ .my_nav{
+    
+    background-color: white  !important;
+    
+
+    
+}
+h1, h2, h3, h4, h5, h6{
+ 
+  font-family: 'Righteous', cursive;
+ 
+}
+
+body{
+ 
+ font-family: 'BenchNine', sans-serif;
+ font-size:20px;
+ 
+}
+
+.my_menu{
+ 
+    color:black !important;
+    
+}
+
+table {
+    border: black 1px solid;
+    border-collapse: separate!important;
+}
+
+
+thead{
+    
+    background-color: #00796b;
+    
+}

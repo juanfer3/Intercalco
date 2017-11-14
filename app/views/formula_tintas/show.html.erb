@@ -2,12 +2,12 @@
 
 <p>
   <strong>Tinta:</strong>
-  <%= @formula_tinta.tinta %>
+  <%= @formula_tinta.tinta.pantone %>
 </p>
 
 <p>
   <strong>Base tinta:</strong>
-  <%= @formula_tinta.base_tinta %>
+  <%= @formula_tinta.base_tinta.descripcion_base %>
 </p>
 
 <p>
@@ -15,10 +15,7 @@
   <%= @formula_tinta.cantidad %>
 </p>
 
-<p>
-  <strong>Estado:</strong>
-  <%= @formula_tinta.estado %>
-</p>
+
 
 <%= link_to 'Edit', edit_formula_tinta_path(@formula_tinta) %> |
 <%= link_to 'Back', formula_tintas_path %>

@@ -3,30 +3,52 @@
 
   <div class="form-inputs">
     
-    <%= f.input :codigo %>
-    <%= f.input :pantone %>
-    <%= f.association :malla %>
-    <%= f.association :producto %>
+    <div class="col l6">
+      <%= f.input :codigo,class:' l6 ' %>
+    
+    
+      <%= f.input :pantone, class:' l6 '%>
+    </div>
+    <%= 
+      f.association :malla,
+        collection: Malla.all, 
+         label_method: :num_malla, 
+         value_method: :id, 
+         as: :select, 
+         include_blank: 'Seleccion Malla'
+    %>
+    <%= 
+    f.association :producto,
+        collection: Producto.all, 
+         label_method: :nombre, 
+         value_method: :id, 
+         as: :select, 
+         include_blank: 'Seleccion Producto'
+    %>
     <%= f.input :tipo_de_unidad %>
     <%= f.input :cantida %>
-    <%= f.input :estado %>
+    
     
   </div>
-
-  <%=f.fields_for :formula_tintas do |formulas_for_form|%>
-  
-     <%= render 'formula_tinta_fields', f:formulas_for_form%>
-     
-  <%end%>
-
+  <div class="add_fields">
+    <%=f.fields_for :formula_tintas do |formulas_for_form|%>
+    
+       <%= render 'formula_tinta_fields', f:formulas_for_form%>
+       
+    <%end%>
+  </div>
   <div class="form-actions">
     <div class="add_fields add">
-
+    
     
     </div>
       
+      
+      <a class="waves-effect waves-light btn  add"><i class="material-icons right">cloud</i>button</a>
+        
+      
         <%= 
-          link_to_add_fields "add_fields ",
+          link_to_add_fields "add_fields",
           f, :formula_tintas  
         %>
       

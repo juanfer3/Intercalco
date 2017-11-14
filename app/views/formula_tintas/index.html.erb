@@ -16,8 +16,8 @@
   <tbody>
     <% @formula_tintas.each do |formula_tinta| %>
       <tr>
-        <td><%= formula_tinta.tinta %></td>
-        <td><%= formula_tinta.base_tinta %></td>
+        <td><%= formula_tinta.tinta.pantone %></td>
+        <td><%= formula_tinta.base_tinta.descripcion_base %></td>
         <td><%= formula_tinta.cantidad %></td>
         <td><%= formula_tinta.estado %></td>
         <td><%= link_to 'Show', formula_tinta %></td>
@@ -30,4 +30,11 @@
 
 <br>
 
-<%= link_to 'New Formula Tinta', new_formula_tinta_path %>
+<!--Boton Crear -->
+  <div class="fixed-action-btn">
+    <a href="formula_tintas/new"  class="btn-floating btn-large red">
+      <i class="large material-icons">add_to_photos</i>
+    </a>
+  </div>
+<!--/Boton Crear -->
+

@@ -11,15 +11,15 @@
   <body>
     <!--/Navbar-->
     <nav>
-    <div class="nav-wrapper">
+    <div class="nav-wrapper my_nav">
       <a href="#" class="brand-logo">Logo</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><%=link_to "Lineas De Tintas", lineas_tinta_path%></li>
-        <li><%=link_to "Mallas", mallas_path%></li>
-        <li><%=link_to "Tintas", tintas_path%></li>
-        <li><%=link_to "Productos", productos_path%></li>
-        <li><%=link_to "Formula Tintas", formula_tintas_path%></li>
-        <li><%=link_to "Base Para Tintas", base_tintas_path%></li>
+      <ul id="nav-mobile" class="right hide-on-med-and-down my_menu">
+        <li><%=link_to "Lineas De Tintas", lineas_tinta_path, class:'my_menu'%></li>
+        <li><%=link_to "Mallas", mallas_path, class:'my_menu'%></li>
+        <li><%=link_to "Tintas", tintas_path, class:'my_menu'%></li>
+        <li><%=link_to "Productos", productos_path, class:'my_menu'%></li>
+        <li><%=link_to "Formula Tintas", formula_tintas_path, class:'my_menu'%></li>
+        <li><%=link_to "Base Para Tintas", base_tintas_path, class:'my_menu'%></li>
       </ul>
     </div>
   </nav>

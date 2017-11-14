@@ -7,7 +7,7 @@
 
 <p>
   <strong>Linea tinta:</strong>
-  <%= @base_tinta.linea_tinta %>
+  <%= @base_tinta.linea_tinta.tipo_de_linea %>
 </p>
 
 <p>
@@ -15,10 +15,7 @@
   <%= @base_tinta.descripcion_base %>
 </p>
 
-<p>
-  <strong>Estado:</strong>
-  <%= @base_tinta.estado %>
-</p>
+
 
 <%= link_to 'Edit', edit_base_tinta_path(@base_tinta) %> |
 <%= link_to 'Back', base_tintas_path %>

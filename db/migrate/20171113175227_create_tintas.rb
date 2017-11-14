@@ -7,7 +7,7 @@ class CreateTintas < ActiveRecord::Migration[5.1]
       t.references :producto, foreign_key: true
       t.string :tipo_de_unidad
       t.float :cantida
-      t.boolean :estado
+      t.boolean :estado, default(true)
 
       t.timestamps
     end
