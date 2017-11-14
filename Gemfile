@@ -68,8 +68,6 @@ gem 'simple_form'
 gem 'nested_form'
 gem 'materialize-form'
 
-# cocoon
-gem "cocoon"
 
 # paginacion
 gem 'kaminari'

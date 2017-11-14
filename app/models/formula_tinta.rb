@@ -1,5 +1,5 @@
 class FormulaTinta < ApplicationRecord
-  belongs_to :tinta
+  belongs_to :tinta, optional: true
   belongs_to :base_tinta
   
   has_many :totales_formula , inverse_of: :formula_tinta, dependent: :destroy
